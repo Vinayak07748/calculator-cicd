@@ -8,8 +8,9 @@ def home():
 
 @app.get("/multiply")
 def multiply(a: int, b: int):
-    return a * b
+    return {"result": a * b}
+
 
 @app.get("/add")
 def add(a: int, b: int):
-    return a + b
+    return {"result": a + b}
