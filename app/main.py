@@ -6,6 +6,10 @@ app = FastAPI()
 def home():
     return {"message": "calculator API is running"}
 
+@app.get("/multiply")
+def multiply(a: int, b: int):
+    return a * b
+
 @app.get("/add")
 def add(a: int, b: int):
     return a + b
